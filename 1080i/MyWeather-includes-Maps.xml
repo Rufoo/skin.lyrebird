@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="WeatherMaps">
+			<control type="group">
+					<visible>Container(9000).HasFocus(6)</visible>
+					<include>SettingsFadeEffect</include>
+					<left>480</left>
+					<top>10</top>
+					<width>1380</width>
+					<height>760</height>
+					<control type="image">
+						<width>1380</width>
+						<height>760</height>
+						<texture diffuse="diffuse/weathermap.png">$INFO[Window.Property(Map.1.Area)]</texture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+					</control>
+					<control type="image">
+						<width>1380</width>
+						<height>760</height>
+						<texture diffuse="diffuse/weathermap.png">$INFO[Window.Property(Map.1.Layer)]</texture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<colordiffuse>70FFFFFF</colordiffuse>
+					</control>
+					<control type="image">
+						<top>700</top>
+						<width>1380</width>
+						<height>60</height>
+						<texture>$INFO[Window.Property(Map.1.Legend)]</texture>
+						<aspectratio align="right" aligny="bottom">keep</aspectratio>
+					</control>
+				</control>
+				
+				<control type="group">
+					<visible>Container(9000).HasFocus(7)</visible>
+					<include>SettingsFadeEffect</include>
+					<left>480</left>
+					<top>10</top>
+					<width>1380</width>
+					<height>760</height>
+					<control type="image">
+						<width>1380</width>
+						<height>760</height>
+						<texture diffuse="diffuse/weathermap.png">$INFO[Window.Property(Map.2.Area)]</texture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+					</control>
+					<control type="image">
+						<width>1380</width>
+						<height>760</height>
+						<texture diffuse="diffuse/weathermap.png">$INFO[Window.Property(Map.2.Layer)]</texture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<colordiffuse>70FFFFFF</colordiffuse>
+					</control>
+					<control type="image">
+						<top>700</top>
+						<width>1380</width>
+						<height>60</height>
+						<texture>$INFO[Window.Property(Map.2.Legend)]</texture>
+						<aspectratio align="right" aligny="bottom">keep</aspectratio>
+					</control>
+				</control>
+				
+				<control type="group">
+					<visible>Container(9000).HasFocus(8)</visible>
+					<include>SettingsFadeEffect</include>
+					<left>480</left>
+					<top>10</top>
+					<width>1380</width>
+					<height>760</height>
+					<control type="image">
+						<width>1380</width>
+						<height>760</height>
+						<texture diffuse="diffuse/weathermap.png">$INFO[Window.Property(Map.3.Area)]</texture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+					</control>
+					<control type="image">
+						<width>1380</width>
+						<height>760</height>
+						<texture diffuse="diffuse/weathermap.png">$INFO[Window.Property(Map.3.Layer)]</texture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<colordiffuse>70FFFFFF</colordiffuse>
+					</control>
+					<control type="image">
+						<top>700</top>
+						<width>1380</width>
+						<height>60</height>
+						<texture>$INFO[Window.Property(Map.3.Legend)]</texture>
+						<aspectratio align="right" aligny="bottom">keep</aspectratio>
+					</control>
+				</control>
+				
+				<control type="group">
+					<visible>Container(9000).HasFocus(9)</visible>
+					<include>SettingsFadeEffect</include>
+					<left>480</left>
+					<top>10</top>
+					<width>1380</width>
+					<height>760</height>
+					<control type="image">
+						<width>1380</width>
+						<height>760</height>
+						<texture diffuse="diffuse/weathermap.png">$INFO[Window.Property(Map.4.Area)]</texture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+					</control>
+					<control type="image">
+						<width>1380</width>
+						<height>760</height>
+						<texture diffuse="diffuse/weathermap.png">$INFO[Window.Property(Map.4.Layer)]</texture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<colordiffuse>70FFFFFF</colordiffuse>
+					</control>
+					<control type="image">
+						<top>700</top>
+						<width>1380</width>
+						<height>60</height>
+						<texture>$INFO[Window.Property(Map.4.Legend)]</texture>
+						<aspectratio align="right" aligny="bottom">keep</aspectratio>
+					</control>
+				</control>
+				
+				<control type="group">
+					<visible>Container(9000).HasFocus(10)</visible>
+					<include>SettingsFadeEffect</include>
+					<left>480</left>
+					<top>10</top>
+					<width>1380</width>
+					<height>760</height>
+					<control type="image">
+						<width>1380</width>
+						<height>760</height>
+						<texture diffuse="diffuse/weathermap.png">$INFO[Window.Property(Map.5.Area)]</texture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+					</control>
+					<control type="image">
+						<width>1380</width>
+						<height>760</height>
+						<texture diffuse="diffuse/weathermap.png">$INFO[Window.Property(Map.5.Layer)]</texture>
+						<aspectratio scalediffuse="false">scale</aspectratio>
+						<colordiffuse>70FFFFFF</colordiffuse>
+					</control>
+					<control type="image">
+						<top>700</top>
+						<width>1380</width>
+						<height>60</height>
+						<texture>$INFO[Window.Property(Map.5.Legend)]</texture>
+						<aspectratio align="right" aligny="bottom">keep</aspectratio>
+					</control>
+				</control>
+	
+
+	
+	</include>
+</includes>

@@ -31,6 +31,11 @@
             <width>510</width>
             <height min="60" max="1080">auto</height>
             <itemgap>0</itemgap>
+            <control type="button" id="995">
+                <label>222</label>
+                <onclick>Back</onclick>
+                <visible>Skin.HasSetting(Enable.TouchScreen)</visible>
+            </control>
             <control type="button" id="994">
                 <label>$LOCALIZE[14098] $LOCALIZE[20410]</label>
                 <onclick>PlayMedia($ESCINFO[ListItem.Trailer])</onclick>

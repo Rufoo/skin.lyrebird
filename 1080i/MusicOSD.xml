@@ -209,6 +209,23 @@
                     <onclick>ActivateWindow(1120)</onclick>
                     <onclick>SetProperty(MusicOSD.Settings,True,home)</onclick>
                 </control>
+                <control type="button" id="712">
+                    <texturefocus colordiffuse="highlight">osd/button_bg.png</texturefocus>
+                    <texturenofocus colordiffuse="22ffffff">osd/button_bg.png</texturenofocus>
+                    <label>C</label>
+                    <align>center</align>
+                    <width>100</width>
+                    <height>64</height>
+                    <font>IconMedium</font>
+<!--                     <onclick>Dialog.Close(musicosd)</onclick> -->
+
+					<onclick condition="String.IsEmpty(Skin.String(musicvis.view)) | String.IsEqual(Skin.String(musicvis.view),StandardView)">Skin.SetString(musicvis.view,CoverView)</onclick>
+					<onclick condition="!String.IsEmpty(Skin.String(musicvis.view)) + String.IsEqual(Skin.String(musicvis.view),CoverView)">Skin.SetString(musicvis.view,CoverView2)</onclick>
+					<onclick condition="!String.IsEmpty(Skin.String(musicvis.view)) + String.IsEqual(Skin.String(musicvis.view),CoverView2)">Skin.SetString(musicvis.view,StandardView)</onclick>
+<!--      	            <onclick>ReplaceWindow(visualisation,Skin.String(musicvis.view))</onclick> -->
+                </control>
+
+
             </control>
         </control>
     </controls>

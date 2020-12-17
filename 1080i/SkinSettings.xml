@@ -403,7 +403,15 @@
                         <onclick>Skin.ToggleSetting(Disable.ShowBackgroundVis)</onclick>
                         <selected>!Skin.HasSetting(Disable.ShowBackgroundVis)</selected>
                     </control>
+                    <control type="button" id="650">
+                        <include>SkinSettingsButtonDefaults</include>
+                        <label>Transparency Mask for Visualization + fanart</label>
+                        <label2>$INFO[Skin.String(VisBackgroundMask)]</label2>
+                        <onclick>Skin.SetString(VisBackgroundMask)</onclick>
+                    </control>
+                
                 </control>
+                
                 <control type="grouplist" id="9002">
                     <description>General control area</description>
                     <left>522</left>
@@ -458,6 +466,19 @@
                         <label>31130</label>
                         <label2>$INFO[Skin.String(busyloader)]</label2>
                         <onclick>Skin.SetImage(busyloader,special://skin/extras/spinners)</onclick>
+                    </control>
+                    
+                    <control type="radiobutton" id="404">
+                        <include>SkinSettingsButtonDefaults</include>
+                        <label>Show Touch Screen Controls</label>
+                        <onclick>Skin.ToggleSetting(Enable.TouchScreen)</onclick>
+                        <selected>Skin.HasSetting(Enable.TouchScreen)</selected>
+                    </control>
+                    <control type="radiobutton" id="405">
+                        <include>SkinSettingsButtonDefaults</include>
+                        <label>Use External Genre Icons</label>
+                        <onclick>Skin.ToggleSetting(Enable.ExternalGenreIcons)</onclick>
+                        <selected>Skin.HasSetting(Enable.ExternalGenreIcons)</selected>
                     </control>
                 </control>
                 <control type="grouplist" id="9003">
@@ -545,6 +566,22 @@
                         <onclick>Skin.ToggleDebug</onclick>
                         <selected>Skin.HasSetting(Skin.ToggleDebug)</selected>
                     </control>
+
+                    <control type="radiobutton" id="404">
+                        <include>SkinSettingsButtonDefaults</include>
+                        <label>Use Icons From Weather Provider</label>
+                        <onclick>Skin.ToggleSetting(Enable.RemoteWeatherIcons)</onclick>
+                        <selected>Skin.HasSetting(Enable.RemoteWeatherIcons)</selected>
+                    </control>
+					<!-- 
+                    <control type="button" id="405">
+                        <include>SkinSettingsButtonDefaults</include>
+                        <label>Path for Custom Actor-Role Images</label>
+                        <label2>$INFO[Skin.String(CustomActorRolePath)]</label2>
+                        <onclick>Skin.SetPath(CustomActorRolePath)</onclick>
+                    </control>
+					-->
+					
                 </control>
                 <control type="grouplist" id="9008">
                     <description>About control area</description>

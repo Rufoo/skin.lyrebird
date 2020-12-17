@@ -56,6 +56,27 @@
                 <selected>Skin.HasSetting(HideVisualizationFanart)</selected>
                 <enable>Visualisation.Enabled + ![String.IsEqual(Visualisation.Name,waveform) | String.IsEqual(Visualisation.Name,opengl spectrum) | String.IsEqual(Visualisation.Name,directx spectrum)]</enable>
             </control>
+            <control type="button" id="90215">
+                 <width>1074</width>
+                 <label>Transparency Mask for Background</label>
+                 <label2>$INFO[Skin.String(VisBackgroundMask)]</label2>
+                 <onclick>Skin.SetString(VisBackgroundMask)</onclick>
+             </control>
+
+            <control type="button" id="90216">
+                <description>View</description>
+                <width>1074</width>
+                <label>View</label>
+                <label2>$INFO[Skin.String(musicvis.view)]</label2>
+                <onclick>SetProperty(Dialog.1.Label,StandardView)</onclick>
+                <onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetString(musicvis.view,StandardView))</onclick>
+                <onclick>SetProperty(Dialog.2.Label,CoverView)</onclick>
+                <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(musicvis.view,CoverView))</onclick>
+                <onclick>SetProperty(Dialog.3.Label,CoverView2)</onclick>
+                <onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString(musicvis.view,CoverView2))</onclick>
+                <onclick>RunScript(script.toolbox,info=selectdialog,header=Choose View)</onclick>
+            </control>
+
             <control type="radiobutton" id="90203">
                 <description>Big Ass Label Button</description>
                 <width>1074</width>

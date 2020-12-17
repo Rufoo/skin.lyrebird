@@ -460,7 +460,7 @@
             </control>
             <control type="group">
                 <visible>Control.IsVisible(57) + !String.IsEqual(Container.SortMethod,$LOCALIZE[13409])</visible>
-                <include condition="Skin.HasSetting(Enable.MediaFlags)" content="MediaFlags">
+                <include condition="Skin.HasSetting(Enable.MediaFlags)" content="VideoMediaFlags">
                     <param name="left" value="935" />
                     <param name="top" value="-5" />
                     <param name="align" value="right" />

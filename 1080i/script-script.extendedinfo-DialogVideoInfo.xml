@@ -238,13 +238,13 @@
                     <control type="image">
                         <height>80</height>
                         <include>MediaFlagVars</include>
-                        <texture>$INFO[Window.Property(VideoResolution),flags/resolution/,.png]</texture>
+                        <texture>$INFO[Window.Property(VideoResolution),flags/videoresolution/,.png]</texture>
                         <visible>!String.IsEmpty(Window.Property(VideoResolution))</visible>
                     </control>
                     <control type="image">
                         <height>80</height>
                         <include>MediaFlagVars</include>
-                        <texture>$INFO[Window.Property(VideoCodec),flags/video/,.png]</texture>
+                        <texture>$INFO[Window.Property(VideoCodec),flags/videocodec/,.png]</texture>
                         <visible>!String.IsEmpty(Window.Property(VideoCodec))</visible>
                     </control>
                     <control type="image">
@@ -256,14 +256,14 @@
                     <control type="image">
                         <height>80</height>
                         <include>MediaFlagVars</include>
-                        <texture>$INFO[Window.Property(AudioCodec),flags/audio/,.png]</texture>
+                        <texture>$INFO[Window.Property(AudioCodec),flags/audiocodec/,.png]</texture>
                         <visible>!String.IsEmpty(Window.Property(AudioCodec))</visible>
                     </control>
                     <control type="image">
                         <height>80</height>
                         <width>100</width>
                         <include>MediaFlagVars</include>
-                        <texture>$INFO[Window.Property(AudioChannels),flags/channels/,.png]</texture>
+                        <texture>$INFO[Window.Property(AudioChannels),flags/audiochannel/,.png]</texture>
                         <visible>!String.IsEmpty(Window.Property(AudioChannels))</visible>
                     </control>
                     <control type="image">

@@ -143,6 +143,7 @@
                     </include>
                 </control>
                 <control type="group">
+                	<description>Weather Widget</description>
                     <visible>Control.IsVisible(8012$SKINSHORTCUTS[id])</visible>
                     <top>0</top>
                     <left>493</left>
@@ -184,7 +185,7 @@
                         <control type="label">
                             <width>auto</width>
                             <font>font13</font>
-                            <label> $LOCALIZE[1405] </label>
+                            <label> $LOCALIZE[19107] </label>
                             <visible>!String.IsEmpty(Window(weather).Property(Location))</visible>
                         </control>
                         <control type="label">
@@ -198,7 +199,16 @@
                         <top>40</top>
                         <height>270</height>
                         <aspectratio scalediffuse="false" align="left" aligny="center">keep</aspectratio>
+						<texture background="true">$INFO[Window(weather).Property(Current.RemoteIcon)]</texture>
+						<visible>Skin.HasSetting(Enable.RemoteWeatherIcons)</visible>
+                    </control>
+                    <control type="image">
+                        <left>40</left>
+                        <top>40</top>
+                        <height>270</height>
+                        <aspectratio scalediffuse="false" align="left" aligny="center">keep</aspectratio>
                         <texture background="true">$VAR[WeatherIconVar]$INFO[Window(weather).Property(Current.FanartCode),,.png]</texture>
+ 						<visible>!Skin.HasSetting(Enable.RemoteWeatherIcons)</visible>
                     </control>
                     <control type="grouplist">
                         <top>0</top>
@@ -219,6 +229,15 @@
                             <font>font16</font>
                             <label>$INFO[System.TemperatureUnits]</label>
                         </control>
+						<control type="label">
+							<description>weather alerts</description>
+							<width>auto</width>	
+							<left>270</left>
+							<height>216</height>
+							<font>font16</font>
+							<label>  [COLOR yellow]Weather Alert![/COLOR]</label>
+							<visible>!String.IsEmpty(Window(weather).Property(Alerts.IsFetched))</visible>
+					</control>
                     </control>
                     <control type="label">
                         <description>current condition label</description>
@@ -227,6 +246,7 @@
                         <width>800</width>
                         <height>60</height>
                         <label>$INFO[Window(weather).Property(Current.Condition)], $LOCALIZE[402] $INFO[Window(weather).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits]</label>
+						<scroll>true</scroll>
                         <font>font30</font>
                     </control>
                     <control type="grouplist">
@@ -249,6 +269,7 @@
                             <font>font14</font>
                         </control>
                         <control type="label">
+                        	<visible>!String.IsEmpty(Window(weather).Property(Today.Sunrise))</visible>
                             <label>[COLOR highlight]$LOCALIZE[33027]:[/COLOR] [LOWERCASE]$INFO[Window(weather).Property(Today.Sunrise)][/LOWERCASE]</label>
                             <width>438</width>
                             <height>40</height>
@@ -256,6 +277,7 @@
                             <font>font14</font>
                         </control>
                         <control type="label">
+                        	<visible>!String.IsEmpty(Window(weather).Property(Today.Sunset))</visible>
                             <label>[COLOR highlight]$LOCALIZE[33028]:[/COLOR] [LOWERCASE]$INFO[Window(weather).Property(Today.Sunset)][/LOWERCASE]</label>
                             <width>438</width>
                             <height>40</height>
@@ -438,6 +460,7 @@
                     </include>
                 </control>
                 <control type="group">
+                	<description>Weather Widget</description>
                     <visible>Control.IsVisible(8012$SKINSHORTCUTS[id])</visible>
                     <top>0</top>
                     <left>85</left>
@@ -479,7 +502,7 @@
                         <control type="label">
                             <width>auto</width>
                             <font>font13</font>
-                            <label> $LOCALIZE[1405] </label>
+                            <label> $LOCALIZE[19107] </label>
                             <visible>!String.IsEmpty(Window(weather).Property(Location))</visible>
                         </control>
                         <control type="label">
@@ -493,8 +516,18 @@
                         <top>40</top>
                         <height>270</height>
                         <aspectratio scalediffuse="false" align="left" aligny="center">keep</aspectratio>
-                        <texture background="true">$VAR[WeatherIconVar]$INFO[Window(weather).Property(Current.FanartCode),,.png]</texture>
+						<texture background="true">$INFO[Window(weather).Property(Current.RemoteIcon)]</texture>
+						<visible>Skin.HasSetting(Enable.RemoteWeatherIcons)</visible>
                     </control>
+                    <control type="image">
+                        <left>40</left>
+                        <top>40</top>
+                        <height>270</height>
+                        <aspectratio scalediffuse="false" align="left" aligny="center">keep</aspectratio>
+                        <texture background="true">$VAR[WeatherIconVar]$INFO[Window(weather).Property(Current.FanartCode),,.png]</texture>
+ 						<visible>!Skin.HasSetting(Enable.RemoteWeatherIcons)</visible>
+                    </control>
+
                     <control type="grouplist">
                         <top>0</top>
                         <left>350</left>
@@ -522,6 +555,7 @@
                         <width>800</width>
                         <height>60</height>
                         <label>$INFO[Window(weather).Property(Current.Condition)], $LOCALIZE[402] $INFO[Window(weather).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits]</label>
+						<scroll>true</scroll>
                         <font>font30</font>
                     </control>
                     <control type="grouplist">
@@ -544,6 +578,7 @@
                             <font>font14</font>
                         </control>
                         <control type="label">
+                        	<visible>!String.IsEmpty(Window(weather).Property(Today.Sunrise))</visible>
                             <label>[COLOR highlight]$LOCALIZE[33027]:[/COLOR] $INFO[Window(weather).Property(Today.Sunrise)]</label>
                             <width>438</width>
                             <height>40</height>
@@ -551,6 +586,7 @@
                             <font>font14</font>
                         </control>
                         <control type="label">
+                        	<visible>!String.IsEmpty(Window(weather).Property(Today.Sunset))</visible>
                             <label>[COLOR highlight]$LOCALIZE[33028]:[/COLOR] $INFO[Window(weather).Property(Today.Sunset)]</label>
                             <width>438</width>
                             <height>40</height>

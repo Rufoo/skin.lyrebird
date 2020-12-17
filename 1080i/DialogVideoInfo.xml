@@ -4,7 +4,8 @@
     <allowoverlay>no</allowoverlay>
     <onload>SendClick(9000,5)</onload>
     <controls>
-        <include>InfoDialogTopbar</include>
+<!--         <include>InfoDialogTopbar</include> -->
+<!-- <include>Topbar</include> -->
         <control type="group">
             <include>Animation.Common</include>
             <left>703</left>
@@ -218,10 +219,12 @@
                 <control type="group">
                     <visible>![Control.IsVisible(150) | Control.IsVisible(250) | Control.IsVisible(350) | Control.HasFocus(206) | Control.IsVisible(50)]</visible>
                     <animation effect="fade" time="300" start="0" end="100" delay="100">Visible</animation>
-                    <include content="MediaFlags">
+                    <include content="VideoMediaFlags">
                         <param name="left" value="0" />
                         <param name="top" value="890" />
-                        <param name="align" value="left" />
+                        <param name="width" value="300" />
+                        <param name="height" value="$VAR[MediaFlagHeight]"/>
+                        <param name="align" value="center"/>
                         <param name="orientation" value="horizontal" />
                     </include>
                 </control>
@@ -329,6 +332,7 @@
                     <orientation>horizontal</orientation>
                     <itemlayout height="450" width="289">
                         <control type="group">
+
                             <top>32</top>
                             <control type="image">
                                 <top>6</top>
@@ -338,6 +342,17 @@
                                 <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
                                 <texture fallback="default_Actor.png" background="true" diffuse="diffuse/videoinfo-actor.png">$INFO[ListItem.Art(thumb)]</texture>
                             </control>
+
+                            <!-- Block for overriding the actor image with Actor - Role.jpg -->
+                            <control type="image">
+                                <top>6</top>
+                                <left>6</left>
+                                <width>277</width>
+                                <height>406</height>
+                                <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+                                <texture background="true" diffuse="diffuse/videoinfo-actor.png">/media-share/People/$INFO[ListItem.Label] - $INFO[ListItem.Label2].jpg</texture>
+		                    </control>
+
                             <control type="image">
                                 <top>6</top>
                                 <left>6</left>
@@ -364,6 +379,10 @@
                     </itemlayout>
                     <focusedlayout height="450" width="289">
                         <control type="group">
+<!-- 
+							<onclick condition="!System.HasAddon(script.extendedinfo)">InstallAddon(script.extendedinfo)</onclick>
+							<onclick>RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[Container(50).ListItem.Label])</onclick>
+-->
                             <top>32</top>
                             <include>PanelFocusedItemZoom</include>
                             <control type="image">
@@ -374,6 +393,19 @@
                                 <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
                                 <texture fallback="default_Actor.png" background="true" diffuse="diffuse/videoinfo-actor.png">$INFO[ListItem.Art(thumb)]</texture>
                             </control>
+
+
+                            <!-- Block for overriding the actor image with Actor - Role.jpg -->
+                            <!-- note that the path has to be hard-coded  -->
+                            <control type="image">
+                                <top>6</top>
+                                <left>6</left>
+                                <width>277</width>
+                                <height>406</height>
+                                <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+                                <texture background="true" diffuse="diffuse/videoinfo-actor.png">/media-share/People/$INFO[ListItem.Label] - $INFO[ListItem.Label2].jpg</texture>
+		                    </control>
+
                             <control type="image">
                                 <animation center="auto" condition="Control.HasFocus(50)" easing="inout" effect="fade" end="0" start="100" time="300" tween="sine">Focus</animation>
                                 <animation center="auto" condition="Control.HasFocus(50)" easing="inout" effect="fade" end="100" start="0" time="300" tween="sine">UnFocus</animation>

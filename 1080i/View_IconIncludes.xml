@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+
+	<expression name="tvvis">
+		Skin.HasSetting(Enable.ExternalGenreIcons)
+		+
+		[
+		[
+		String.StartsWith(ListItem.FolderPath,videodb://tvshows/)
+		]
+		+ [
+		String.IsEqual(ListItem.DBTYPE,source)
+		| String.IsEqual(ListItem.DBTYPE,genre)
+		| String.IsEqual(ListItem.DBTYPE,tag)
+		]
+		]
+	</expression>
+
+	<expression name="movievis">
+		Skin.HasSetting(Enable.ExternalGenreIcons)
+		+
+		[
+		[
+		String.StartsWith(ListItem.FolderPath,videodb://movies/)
+		| String.StartsWith(ListItem.FolderPath,videodb://playlists/video/)
+		]
+		+ [
+		String.IsEqual(ListItem.DBTYPE,source)
+		| String.IsEqual(ListItem.DBTYPE,genre)
+		| String.IsEqual(ListItem.DBTYPE,tag)
+		]
+		]
+	</expression>
+
+	<expression name="musicvis">
+
+		Skin.HasSetting(Enable.ExternalGenreIcons)
+		+
+		[
+		String.IsEqual(ListItem.Path,/music/)
+		| [
+		[
+		String.StartsWith(ListItem.FolderPath,musicdb:/)
+		]
+		+ [
+		String.IsEqual(ListItem.DBTYPE,source)
+		| String.IsEqual(ListItem.DBTYPE,tag)
+		| String.IsEqual(ListItem.DBTYPE,genre)
+		]
+		]
+		]
+	</expression>
+
+	<expression name="externalGenreIcon">
+		$EXP[movievis] | $EXP[tvvis] | $EXP[musicvis]
+	</expression>
+
+	<include name="external-genre-icon">
+		<param name="left" />
+		<param name="top" />
+		<param name="width" />
+		<param name="height" />
+		<definition>
+
+
+			<control type="group">
+				<visible>$EXP[movievis]</visible>
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<include content="external-genre-icon-image">
+					<param name="width">$PARAM[width]"</param>
+					<param name="height">$PARAM[height]</param>
+					<param name="visible">$EXP[movievis]</param>
+					<param name="icon">/media-share/icons/movies/$INFO[ListItem.Label]</param>
+				</include>
+			</control>
+
+
+			<control type="group">
+				<visible>$EXP[tvvis]</visible>
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<include content="external-genre-icon-image">
+					<param name="width">$PARAM[width]"</param>
+					<param name="height">$PARAM[height]</param>
+					<param name="visible">$EXP[tvvis]</param>
+					<param name="icon">/media-share/icons/tvshows/$INFO[ListItem.Label]</param>
+				</include>
+			</control>
+
+
+			<control type="group">
+				<visible>$EXP[musicvis]</visible>
+				<left>$PARAM[left]</left>
+				<top>$PARAM[top]</top>
+				<include content="external-genre-icon-image">
+					<param name="width">$PARAM[width]"</param>
+					<param name="height">$PARAM[height]</param>
+					<param name="visible">$EXP[musicvis]</param>
+					<param name="icon">/media-share/icons/music/$INFO[ListItem.Label]</param>
+				</include>
+			</control>
+
+		</definition>
+	</include>
+
+	<include name="external-genre-icon-image">
+		<param name="width" />
+		<param name="height" />
+		<param name="icon" />
+		<param name="visible" />
+		<definition>
+			<control type="image">
+				<visible>$PARAM[visible]</visible>
+				<left>0</left>
+				<top>0</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
+				<texture background="false">$PARAM[icon].jpg</texture>
+			</control>
+			<control type="image">
+				<visible>$PARAM[visible]</visible>
+				<left>0</left>
+				<top>0</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
+				<texture background="false">$PARAM[icon].png</texture>
+			</control>
+			<control type="image">
+				<visible>$PARAM[visible]</visible>
+				<left>0</left>
+				<top>0</top>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
+				<texture background="false">$PARAM[icon].gif</texture>
+			</control>
+		</definition>
+	</include>
+
+
+</includes>

@@ -147,7 +147,7 @@
                             <top>185</top>
                             <width>198</width>
                             <include>MediaFlagVars</include>
-                            <texture colordiffuse="maintext">$INFO[ListItem.FileExtension,flags/audio/,.png]</texture>
+                            <texture colordiffuse="maintext">$INFO[ListItem.FileExtension,flags/audiocodec/,.png]</texture>
                         </control>
                     </focusedlayout>
                 </control>

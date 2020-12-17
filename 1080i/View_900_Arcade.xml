@@ -1327,13 +1327,13 @@
             <control type="image">
                 <height>60</height>
                 <include>MediaFlagVars</include>
-                <texture>$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
+                <texture>$INFO[ListItem.VideoResolution,flags/videoresolution/,.png]</texture>
                 <visible>!String.IsEmpty(ListItem.VideoResolution) + ![$EXP[isTvshow] | $EXP[isSeason]]</visible>
             </control>
             <control type="image">
                 <height>60</height>
                 <include>MediaFlagVars</include>
-                <texture>$VAR[SourceFlagVar,flags/video/,.png]</texture>
+                <texture>$VAR[VideoSourceFlagVar,flags/source/,.png]</texture>
                 <visible>!String.IsEmpty(ListItem.VideoCodec) + ![$EXP[isTvshow] | $EXP[isSeason]]</visible>
             </control>
             <control type="image">
@@ -1345,14 +1345,14 @@
             <control type="image">
                 <height>60</height>
                 <include>MediaFlagVars</include>
-                <texture>$INFO[ListItem.AudioCodec,flags/audio/,.png]</texture>
+                <texture>$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]</texture>
                 <visible>!String.IsEmpty(ListItem.AudioCodec) + ![$EXP[isTvshow] | $EXP[isSeason]]</visible>
             </control>
             <control type="image">
                 <height>60</height>
                 <width>100</width>
                 <include>MediaFlagVars</include>
-                <texture>$INFO[ListItem.AudioChannels,flags/channels/,.png]</texture>
+                <texture>$INFO[ListItem.AudioChannels,flags/audiochannel/,.png]</texture>
                 <visible>!String.IsEmpty(ListItem.AudioChannels) + ![$EXP[isTvshow] | $EXP[isSeason] | Control.IsVisible(500) | Control.IsVisible(57) | Control.IsVisible(55)]</visible>
             </control>
         </control>
@@ -1719,13 +1719,13 @@
             <control type="image">
                 <height>60</height>
                 <include>MediaFlagVars</include>
-                <texture>$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
+                <texture>$INFO[ListItem.VideoResolution,flags/videoresolution/,.png]</texture>
                 <visible>!String.IsEmpty(ListItem.VideoResolution) + ![$EXP[isTvshow] | $EXP[isSeason]]</visible>
             </control>
             <control type="image">
                 <height>60</height>
                 <include>MediaFlagVars</include>
-                <texture>$VAR[SourceFlagVar,flags/video/,.png]</texture>
+                <texture>$VAR[VideoSourceFlagVar,flags/source/,.png]</texture>
                 <visible>!String.IsEmpty(ListItem.VideoCodec) + ![$EXP[isTvshow] | $EXP[isSeason]]</visible>
             </control>
             <control type="image">
@@ -1737,14 +1737,14 @@
             <control type="image">
                 <height>60</height>
                 <include>MediaFlagVars</include>
-                <texture>$INFO[ListItem.AudioCodec,flags/audio/,.png]</texture>
+                <texture>$INFO[ListItem.AudioCodec,flags/audiocodec/,.png]</texture>
                 <visible>!String.IsEmpty(ListItem.AudioCodec) + ![$EXP[isTvshow] | $EXP[isSeason]]</visible>
             </control>
             <control type="image">
                 <height>60</height>
                 <width>100</width>
                 <include>MediaFlagVars</include>
-                <texture>$INFO[ListItem.AudioChannels,flags/channels/,.png]</texture>
+                <texture>$INFO[ListItem.AudioChannels,flags/audiochannel/,.png]</texture>
                 <visible>!String.IsEmpty(ListItem.AudioChannels) + ![$EXP[isTvshow] | $EXP[isSeason] | Control.IsVisible(500) | Control.IsVisible(57) | Control.IsVisible(55)]</visible>
             </control>
         </control>		

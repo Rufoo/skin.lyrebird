@@ -1016,6 +1016,14 @@ msgctxt "#31390"
 msgid "Skin default"
 msgstr "Skin default"
 
+msgctxt "#31391"
+msgid "Blogger"
+msgstr "Blogger"
+
+msgctxt "#31392"
+msgid "Days"
+msgstr "Days"
+
 msgctxt "#31411"
 msgid "Sawasdee"
 msgstr "Sawasdee"

@@ -3,7 +3,7 @@
     <defaultcontrol always="true">9000</defaultcontrol>
     <allowoverlay>no</allowoverlay>
     <controls>
-        <include>InfoDialogTopbar</include>
+<!--         <include>InfoDialogTopbar</include> -->
         <control type="group">
             <include>Animation.Common</include>
             <left>703</left>

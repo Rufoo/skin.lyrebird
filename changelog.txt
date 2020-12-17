@@ -1,0 +1,44 @@
+1.0.0-r18
+* version bump
+
+1.0.0-r17
+* adjustment to weather alert notices
+
+1.0.0-r15
+* add alert notice to main weather screen
+
+1.0.0-r14
+ * fixes
+
+1.0.0-r12
+* Add functionality to use external directory for music Source icons and Genres. Applicable to the List view, Thumnail view, and home-page widgets.
+
+1.0.0-r11
+* fix clicking on favorites widget
+* added back button functionality for touch-screen usage (turned on via property in general setting tab for skin settings
+* added cancel buttons to some dialogs that were missing it
+* consolitated the topnav so it is consistent on all screens.
+
+1.0.0-r10
+* some tweaks on full-screen music sceens
+* Add episode number and title to PVR recordings (tvheadend 4.3 supplies that info)
+* Add episode air-date and thumb to LowList view
+
+1.0.0-r8
+* redo all the flag-icon stuff with some nicer icons (mostly from estruary)
+* make flags show up consitently at the bottom of (most) views
+* add some icons for various music (such as quadraphonic albums), this is mostly dependent on the album name having the appropriate keywords added to them
+ 
+
+1.0.0-r7
+* tweak music visualization views, and add a couple fonts
+
+1.0.0-r6
+* add new alternate music visualzation screen to better display cover, plus some cleanups.
+
+1.0.0-r5
+* some updates to music OSD, artist slideshow playing nice when combined with visualizations
+
+1.0.0-r4
+* update topnav to reintroduce the now-playing info, and move progress bar to a better spot
+

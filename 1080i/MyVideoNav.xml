@@ -57,7 +57,20 @@
 			<include>View_900_Arcade</include>
 			<include>View_902_KeibertzPlus</include>
 			<include>View_903_Coverflow</include>
+
+
         </control>
+		<control type="group">
+			<visible>[Control.IsVisible(50) | Control.IsVisible(51)| Control.IsVisible(500)| Control.IsVisible(501)| Control.IsVisible(52)| Control.IsVisible(55)| Control.IsVisible(57)] + !$EXP[isInfoDialog]</visible>
+			<include content="VideoMediaFlags">
+				<param name="left" value="0" />
+				<param name="top" value="1028" />
+				<param name="width" value="1920" />
+				<param name="height" value="50" />
+				<param name="align" value="center" />
+				<param name="orientation" value="horizontal" />
+			</include>
+		</control>
         <include>Topbar</include>
         <control type="group">
             <left>-440</left>
